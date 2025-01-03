@@ -15,10 +15,19 @@
     }) 
     */
     // Asynchronous
-    function callbackme() {
-        console.log('response end');
-    }
-    fetch('html').then(callbackme);
+    // function callbackme() {
+    //     console.log('response end');
+    // }
+    // 익명 함수
+    fetch('html').then(function(response) {
+        // console.log('response end');
+        // console.log(response.status);
+        if (response.status == '404') {
+            alert('Not Found')
+        } else {
+            alert('Good!')
+        }
+    });
     console.log(1);
     console.log(2);
     ">
